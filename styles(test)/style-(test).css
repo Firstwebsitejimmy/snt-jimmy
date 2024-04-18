@@ -1,0 +1,146 @@
+html {
+  font-size: 20px;
+  font-family: 'Rubik', sans-serif; 
+  background-image: url('../image(test)/dark.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  position: fixed;
+}
+
+body {
+  text-decoration: none;
+  background-size: contain;
+  color: white;
+  width: 100%;
+  margin: 70px auto 0 auto;
+  padding: 0 20px 20px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 40px; /* pour un espacement par défaut sur les côtés */
+  position: relative;
+}
+img {
+  width: 200px;
+  height: auto;
+  cursor: pointer;
+  float: left; /* Flottant à gauche */
+  margin-right: 20px; /* Marge à droite pour séparer de texte */
+  padding-bottom: 70px;
+}
+h1 {
+  font-size: ;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;
+  color: #00a3ff;
+  text-shadow: 3px 3px 1px #00fbff;
+  height: 100px;
+}
+p {
+  font-size: 18px;
+}
+p, li, a {
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  width: 35%;
+  height: auto;
+}
+
+a:hover {
+  color: #db32f9;
+}
+
+/* Barre de navigation */
+.top-nav {
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0); /* Couleur de fond transparente */  color: white;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 999; /* Augmentez le z-index pour placer la barre de navigation devant les autres éléments */
+}
+
+/* Style des boutons */
+.top-nav button {
+  width: 150px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0); /* Couleur de fond transparente */
+  color: white;
+  padding: 10px 10px;
+  margin-right: 6px;
+  cursor: pointer;
+  font-size: 23px;
+  font-weight: bold;
+  border: none;
+}
+.top-nav button.plus_grand{
+  width: 285px;
+}
+/* Effet au survol des boutons */
+.top-nav button:hover {
+  color: white;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4); /* Couleur de fond transparente */
+  border-radius: 10px;
+}
+
+/*pour l'effet de l'écriture*/
+#typing-container {
+  position: relative;
+  display: inline-block;
+}
+
+#typing-effect {
+  font-family: monospace;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+
+#cursor {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background-color: #00fbff;
+  animation: blink 1s infinite;
+}
+#typing-effect {
+  font-family: Rubik, sans-serif; /* Changer la police du texte */
+  font-size: 60px; /* Changer la taille de police */
+  color: white; /* Changer la couleur du texte */
+  font-weight: bold; /* Mettre le texte en gras */
+  /* Vous pouvez ajouter d'autres propriétés CSS ici */
+}
+/*fin de l'effet de l'écriture*/
+
+.top-nav img {
+  width: 50px; /* Définissez la largeur souhaitée */
+  height: auto; /* Laissez la hauteur s'ajuster automatiquement pour conserver les proportions */
+  float: left; /* Pour positionner l'image à gauche */
+  margin-right: 10px;
+  margin-left: 15px;
+}
+
+a {
+  font-size: 16px;
+  color: #c9f5f0;
+  text-decoration: none;
+}
+
+/*menue déroulant*/

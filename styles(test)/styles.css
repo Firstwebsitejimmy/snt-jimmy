@@ -1,0 +1,83 @@
+html {
+  font-size: 20px;
+  font-family: 'Rubik', sans-serif; 
+  background-image: url('../image(test)/dark.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+}
+/* Barre de navigation */
+.top-nav {
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0); /* Couleur de fond transparente */  color: white;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 999; /* Augmentez le z-index pour placer la barre de navigation devant les autres éléments */
+}
+
+/* Style des boutons */
+.top-nav button {
+  width: 150px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0); /* Couleur de fond transparente */
+  color: white;
+  padding: 10px 10px;
+  margin-right: 6px;
+  cursor: pointer;
+  font-size: 23px;
+  font-weight: bold;
+  border: none;
+}
+.top-nav button.plus_grand{
+  width: 285px;
+}
+/* Effet au survol des boutons */
+.top-nav button:hover {
+  color: white;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4); /* Couleur de fond transparente */
+  border-radius: 10px;
+}
+
+.top-nav img {
+  width: 50px; /* Définissez la largeur souhaitée */
+  height: auto; /* Laissez la hauteur s'ajuster automatiquement pour conserver les proportions */
+  float: left; /* Pour positionner l'image à gauche */
+  margin-right: 10px;
+  margin-left: 15px;
+}
+
+.button_lien {
+  text-align: center;
+  margin-top: 0px;
+}
+.button_lien button {
+  display: inline-block;
+  width: 30%; /* Pour que deux boutons occupent environ la moitié de la largeur */
+  margin: 15px; /* Espace entre les boutons */
+  height: 150px;
+  border: 5px solid rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.3); /* Couleur de fond transparente */
+  font-size: 40px;
+  color: white;
+  text-shadow: 2px 2px 1px #00fbff;
+
+}
+.button_lien button:hover {
+  background-color: rgba(255, 255, 255, 0.4); /* Couleur de fond transparente */
+}
+h1 {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: -10px;
+  padding: 20px 0;
+  color: white;
+  text-shadow: 3px 3px 1px #00fbff;
+  height: 100px;
+}

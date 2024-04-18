@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>DIGITAL SHADOWS</title>
+  <link href="../styles(test)/style-anim.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/png" href="../image(test)/hacker.png">
+	<style>
+		body {
+			position: fixed;
+			height: 100vh;
+			display: flex;
+			width: 100vw;
+			background-color: #000;
+			background-image:
+				radial-gradient(#fff700 0.5px, transparent 0.5px);
+			background-size: calc(20 * 1px) calc(20 * 1px);
+			align-items: center;
+			justify-content: center;
+		}
+		h1 {
+			margin: auto;
+			font-size: 80px;
+			text-align: center;
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-image: linear-gradient(#b3ff00 1px, transparent 1px), 
+			linear-gradient(to right, #a2ff00 1px, transparent 1px);
+			background-size: 8px 6px; 
+		}
+	</style>
+</head>
+<body>
+  <nav class="top-nav">
+    <img src="../image(test)/bar.png" alt="logo">
+    <div class="menu-icon">
+      <div class="bar"></div>
+      <div class="bar"></div>
+    <div class="bar"></div>
+    </div>
+      <button id="Accueil">Accueil</button>
+      <button id="lien_1">Animation</button>
+      <button id="lien_2">Simple IA</button>
+      <button id="lien_3" class="plus_grand">Source d'inspiration</button>
+  </nav>
+
+	<div class="pattern1">
+		<h1>DIGITAL SHADOWS</h1>
+	</div>
+	<script src="../scripts/anim.js"></script>
+</body>
+</html>

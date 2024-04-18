@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple IA</title>
+<link rel="stylesheet" href="styles(test)/styles.css">
+<link rel="icon" type="image/png" href="image(test)/hacker.png">
+<style>
+    h1 {
+        font-size: 70px;
+    }
+    .centrer {
+        text-align: center;
+    }
+    #answer-container {
+        margin-top: 20px;
+        text-align: center; /* Centre le contenu horizontalement */
+    }
+    #answer {
+        font-size: 75px;
+        font-weight: bold;
+        display: inline-block; /* Permet de centrer verticalement */
+        white-space: pre; /* Pour maintenir les espaces et les sauts de ligne */
+    }
+    #questionInput {
+        margin-top: 20px;
+        padding: 10px;
+        font-size: 16px;
+        width: 500px;
+    }
+    .hidden {
+        display: none;
+    }
+    .typing-animation {
+        animation: typing 2s steps(40, end); /* Définit l'animation de frappe */
+    }
+    @keyframes typing {
+        from { width: 0; } /* Commence avec une largeur de 0 */
+    }
+</style>
+</head>
+<body>
+    <h1>Simple IA</h1>
+    <nav class="top-nav">
+        <img src="image(test)/bar.png" alt="logo">
+        <div class="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <button id="Accueil">Accueil</button>
+        <button id="lien_1">Animation</button>
+        <button id="lien_2">Simple IA</button>
+        <button id="lien_3" class="plus_grand">Source d'inspiration</button>
+    </nav>
+    <div class="centrer">
+        <input type="text" id="questionInput" placeholder="Posez votre question ici" onkeydown="if(event.keyCode===13) askQuestion()">
+        <div id="answer-container" class="hidden">
+            <div id="answer"></div>
+        </div>
+    </div>
+    <script>
+        function askQuestion() {
+            var question = document.getElementById("questionInput").value;
+            if (question) {
+                var answer = getAnswer();
+                var answerElement = document.getElementById("answer");
+                var answerContainer = document.getElementById("answer-container");
+                answerElement.innerHTML = ''; // Efface le contenu précédent
+                answerContainer.classList.remove("hidden");
+                answerElement.classList.add("typing-animation"); // Ajoute la classe pour l'animation
+                var index = 0;
+                var interval = setInterval(function() {
+                    if (index < answer.length) {
+                        answerElement.innerHTML += answer.charAt(index); // Ajoute chaque caractère
+                        index++;
+                    } else {
+                        clearInterval(interval);
+                    }
+                }, 100); // Ajuste la vitesse de frappe selon tes préférences
+                
+                document.getElementById("questionInput").value = ""; // Réinitialise la valeur de la question
+                document.getElementById("questionInput").placeholder = "Posez une question"; // Modifie le placeholder
+            }
+        }
+
+        function getAnswer() {
+            var answers = ["Oui", "Non"];
+            var randomIndex = Math.floor(Math.random() * answers.length);
+            return answers[randomIndex];
+        }
+    </script>
+    <script src="scripts/main2.js"></script>
+
+</body>
+</html>

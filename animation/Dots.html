@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>DIGITAL SHADOWS</title>
+  <link href="../styles(test)/style-anim.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/png" href="../image(test)/hacker.png">
+	<style>
+		body {
+			height: 100vh;
+			padding: 2rem;
+			display: grid;
+			place-items: center;
+			background-color: black;
+			margin: 0;
+			padding: 0;
+		}
+		.loader {
+			position: relative;
+			display: flex;
+			align-items: end;
+			justify-content: space-between;
+			width: 90px;
+		}
+		.loader:hover .dot {
+			border: 1px solid #4c445b;
+		}
+		.dot {
+			position: absolute;
+			width: 90px;
+			height: 20px;
+			transform-origin: center;
+			animation: leap 2s infinite;
+			animation-timing-function: cubic-bezier(.3, .67, .7, .33);
+		}
+		.dot span {
+			display: block;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background-color: #46ff01;
+			animation: slide 2s infinite linear;
+		}
+		.dot:nth-child(2),
+		.dot:nth-child(2) span {
+			animation-delay: 0.45s;
+		}
+		.dot:nth-child(3),
+		.dot:nth-child(3) span {
+			animation-delay: 0.9s;
+		}
+		@keyframes leap {
+			50% {
+				transform: rotate(180deg);
+			}
+			100% {
+				transform: rotate(180deg);
+			}
+		}
+		@keyframes slide {
+			22% {
+				transform: translate(-30px);
+			}
+			28% {
+				transform: translateX(-30px);
+			}
+			50% {
+				transform: translateX(0);
+			}
+			55% {
+				transform: translate(7px, 3px);
+			}
+			60% {
+				transform: translate(14px, 0);
+			}
+			100% {
+				transform: translateX(70px);
+			}
+		}
+	</style>
+</head>
+<body>
+  <nav class="top-nav">
+    <img src="../image(test)/bar.png" alt="logo">
+    <div class="menu-icon">
+      <div class="bar"></div>
+      <div class="bar"></div>
+    <div class="bar"></div>
+    </div>
+      <button id="Accueil">Accueil</button>
+      <button id="lien_1">Animation</button>
+      <button id="lien_2">Simple IA</button>
+      <button id="lien_3" class="plus_grand">Source d'inspiration</button>
+  </nav>
+  <div class="loader">
+  	<div class="dot"><span></span></div>
+  	<div class="dot"><span></span></div>
+  	<div class="dot"><span></span></div>
+  </div>
+	<script src="../scripts/anim.js"></script>
+</body>
+</html>

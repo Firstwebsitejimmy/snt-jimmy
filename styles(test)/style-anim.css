@@ -1,0 +1,44 @@
+/* Barre de navigation */
+.top-nav {
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0); /* Couleur de fond transparente */  color: white;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 999; /* Augmentez le z-index pour placer la barre de navigation devant les autres éléments */
+}
+
+/* Style des boutons */
+.top-nav button {
+  width: 150px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0); /* Couleur de fond transparente */
+  color: white;
+  padding: 10px 10px;
+  margin-right: 6px;
+  cursor: pointer;
+  font-size: 23px;
+  font-weight: bold;
+  border: none;
+}
+.top-nav button.plus_grand{
+  width: 285px;
+}
+/* Effet au survol des boutons */
+.top-nav button:hover {
+  color: white;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4); /* Couleur de fond transparente */
+  border-radius: 10px;
+}
+
+.top-nav img {
+  width: 50px; /* Définissez la largeur souhaitée */
+  height: auto; /* Laissez la hauteur s'ajuster automatiquement pour conserver les proportions */
+  float: left; /* Pour positionner l'image à gauche */
+  margin-right: 10px;
+  margin-left: 15px;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>Ring</title>
+	<link href="../styles(test)/style-anim.css" rel="stylesheet" type="text/css" />
+	<link rel="icon" type="image/png" href="../image(test)/hacker.png">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js">
+	</script>
+	<style>
+		body {
+			background-color: black;
+			overflow: hidden;
+		}
+		.container {
+			position: fixed;
+			width: 25%;
+			height: 40%;
+			margin: auto;
+			padding: 0;
+		}
+		.container {
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		.inner {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			margin: auto;
+			padding: 0;
+		}
+		.items1,.items2 {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			margin: auto;
+			padding: 0;
+			background-color: transparent;
+			border-radius: 100%;
+			border: black 2px solid;
+		}
+		.items1 {
+			filter: drop-shadow(0px 10px 5px red);
+			animation: value 5s ease-in-out infinite;
+		}
+		.items2 {
+			filter: drop-shadow(10px 0px 5px green);
+			animation: value 5s ease-in-out infinite;
+		}
+		@keyframes value {
+			from, to {
+				transform: rotateZ(0deg);
+			}
+			50% {
+				transform: rotateZ(360deg);
+			}
+		}
+	</style>
+</head>
+<body>
+  <nav class="top-nav">
+    <img src="../image(test)/bar.png" alt="logo">
+    <div class="menu-icon">
+      <div class="bar"></div>
+      <div class="bar"></div>
+    <div class="bar"></div>
+    </div>
+      <button id="Accueil">Accueil</button>
+      <button id="lien_1">Animation</button>
+      <button id="lien_2">Simple IA</button>
+      <button id="lien_3" class="plus_grand">Source d'inspiration</button>
+  </nav>
+
+	<div class="container">
+		<div class="inner">
+			<div class="items1"></div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="inner">
+			<div class="items2"></div>
+		</div>
+	</div>
+	<script>
+		anime({
+			targets: ".container .inner .items1",
+			easing: "linear",
+			loop: true,
+			duration: 3000,
+			keyframes: [
+				{ boxShadow: '0px 10px 5px red' },
+				{ boxShadow: '10px 0px 5px green' },
+				{ boxShadow: '10px 10px 5px blue' },
+				{ boxShadow: '0px 0px 5px red' },
+				],
+		})
+		anime({
+			targets: ".container .inner .items2",
+			easing: "linear",
+			loop: true,
+			duration: 3000,
+			keyframes: [
+				{ boxShadow: '10px 0px 5px green' },
+				{ boxShadow: '0px 10px 5px red' },
+				{ boxShadow: '10px 10px 5px blue' },
+				{ boxShadow: '0px 0px 5px green' },
+				],
+		})
+	</script>
+	<script src="../scripts/anim.js"></script>
+</body>
+</html>
